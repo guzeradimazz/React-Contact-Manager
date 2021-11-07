@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+}
+.header__title{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.header__body{
+    width: 60%;
+    margin: auto;
+}

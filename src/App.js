@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header';
+import React,{ useState,useEffect } from 'react';
+import './styles/App.css';
+import ContactList from './components/ContactList/ContactList';
+
+
 
 function App() {
+const [contacts, setContacts] = useState([])
+
+useEffect(() => {
+  setContacts([
+    {
+      id: '01FKXYKEBDQ8YA425GND83TREK',
+      name:'Nikolas',
+      phone:'12345678'
+    },
+    {
+      id:'01FKXYKNH7Y7ZKHHGYWP3P6XMZ',
+      name:'Maks',
+      phone:'12345678'
+    },
+    {
+      id:'01FKXYKV95EP5TKMT1VNDAPEHE',
+      name:'Dmitry',
+      phone:'12345678'
+    }
+  ])
+}, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <ContactList contacts={contacts}/>
     </div>
   );
 }
