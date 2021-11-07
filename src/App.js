@@ -2,6 +2,7 @@ import Header from './components/Header/Header';
 import React,{ useState,useEffect } from 'react';
 import './styles/App.css';
 import ContactList from './components/ContactList/ContactList';
+import AddForm from './components/AddForm/AddForm';
 
 
 
@@ -24,6 +25,21 @@ useEffect(() => {
       id:'01FKXYKV95EP5TKMT1VNDAPEHE',
       name:'Dmitry',
       phone:'12345678'
+    },
+    {
+      id:'01FKY054GJQB69ECMV8FEV9YCP',
+      name:'Daniil',
+      phone:'12345678'
+    },
+    {
+      id:'01FKY05WQJCEJ07TJ3W6WXN5Z2',
+      name:'Michael',
+      phone:'12345678'
+    },
+    {
+      id:'01FKY05YYR3FJF4ZJFV3CRCQV7',
+      name:'Egor',
+      phone:'12345678'
     }
   ])
 }, [])
@@ -31,7 +47,14 @@ useEffect(() => {
   return (
     <div className="App">
       <Header/>
-      <ContactList contacts={contacts}/>
+      <AddForm
+        contacts={contacts}
+        setContacts={setContacts}
+      />
+      <ContactList 
+        contacts={contacts}
+        setContacts={setContacts}
+      />
     </div>
   );
 }

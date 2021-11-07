@@ -2,11 +2,16 @@ import React from 'react';
 import ContactItem from '../ContactItem/ContactItem';
 import './ContactList.css';
 
-const ContactList = ({contacts}) => {
+const ContactList = ({contacts,setContacts}) => {
     return (
         <div>
             {contacts.map(item=>
-                <ContactItem key={item.id} item={item}/>
+                <ContactItem 
+                    contacts={contacts} 
+                    setContacts={setContacts} 
+                    key={item.id} 
+                    item={item}
+                />
             )}
         </div>
     );
