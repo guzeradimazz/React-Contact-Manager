@@ -3,6 +3,8 @@ import React,{ useState,useEffect } from 'react';
 import './styles/App.css';
 import ContactList from './components/ContactList/ContactList';
 import AddForm from './components/AddForm/AddForm';
+import Search from './components/Search/Search';
+import NotFound from './components/NotFound/NotFound';
 
 
 
@@ -10,6 +12,8 @@ function App() {
 const [contacts, setContacts] = useState([])
 const [name, setName] = useState('')
 const [phone, setPhone] = useState('')
+const [displayedPeople, setDisplayedPeople] = useState([])
+const [searchQuery, setSearchQuery] = useState('')
 
 useEffect(() => {
   setContacts([
@@ -46,6 +50,28 @@ useEffect(() => {
   ])
 }, [])
 
+useEffect(() => {
+  setDisplayedPeople(
+    contacts.filter(contact => contact.name.toLowerCase().includes(searchQuery.toLowerCase()))
+  )
+}, [contacts,searchQuery])
+  if(!displayedPeople.length) return (<div>    
+    <Header/>
+    <AddForm
+      contacts={contacts}
+      setContacts={setContacts}
+      name={name}
+      setName={setName}
+      phone={phone}
+      setPhone={setPhone}
+    />
+    <Search
+      value={searchQuery}
+      onChange={e => setSearchQuery(e.target.value)}
+    />
+    <NotFound/>  
+  </div>)
+
   return (
     <div className="App">
       <Header/>
@@ -57,10 +83,14 @@ useEffect(() => {
         phone={phone}
         setPhone={setPhone}
       />
+      <Search
+        value={searchQuery}
+        onChange={e => setSearchQuery(e.target.value)}
+      />
       <ContactList 
         setName={setName}
         setPhone={setPhone} 
-        contacts={contacts}
+        contacts={displayedPeople}
         setContacts={setContacts}
       />
     </div>
