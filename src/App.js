@@ -5,6 +5,7 @@ import ContactList from './components/ContactList/ContactList';
 import AddForm from './components/AddForm/AddForm';
 import Search from './components/Search/Search';
 import NotFound from './components/NotFound/NotFound';
+import PeopleApi from './API/API';
 
 
 
@@ -16,38 +17,11 @@ const [displayedPeople, setDisplayedPeople] = useState([])
 const [searchQuery, setSearchQuery] = useState('')
 
 useEffect(() => {
-  setContacts([
-    {
-      id: '01FKXYKEBDQ8YA425GND83TREK',
-      name:'Nikolas',
-      phone:'12345678'
-    },
-    {
-      id:'01FKXYKNH7Y7ZKHHGYWP3P6XMZ',
-      name:'Maks',
-      phone:'12345678'
-    },
-    {
-      id:'01FKXYKV95EP5TKMT1VNDAPEHE',
-      name:'Dmitry',
-      phone:'12345678'
-    },
-    {
-      id:'01FKY054GJQB69ECMV8FEV9YCP',
-      name:'Daniil',
-      phone:'12345678'
-    },
-    {
-      id:'01FKY05WQJCEJ07TJ3W6WXN5Z2',
-      name:'Michael',
-      phone:'12345678'
-    },
-    {
-      id:'01FKY05YYR3FJF4ZJFV3CRCQV7',
-      name:'Egor',
-      phone:'12345678'
-    }
-  ])
+  async function fetchData(){
+    const people = await PeopleApi.getAllPeople()
+    setContacts(people)
+  }
+  fetchData()
 }, [])
 
 useEffect(() => {
