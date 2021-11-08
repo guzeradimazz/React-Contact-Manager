@@ -29,7 +29,6 @@ const ContactItem = ({item,contacts,setContacts,setName,setPhone}) => {
                     onClick={()=>reName()}
                 >rename</button>
             </div>
-            <hr />
         </div>
     );
 };
