@@ -1,13 +1,11 @@
 import Header from './components/Header/Header';
 import React,{ useState,useEffect } from 'react';
-import './styles/App.css';
 import ContactList from './components/ContactList/ContactList';
 import AddForm from './components/AddForm/AddForm';
 import Search from './components/Search/Search';
 import NotFound from './components/NotFound/NotFound';
 import PeopleApi from './API/API';
-
-
+import './styles/App.css';
 
 function App() {
 const [contacts, setContacts] = useState([])

@@ -9,7 +9,7 @@ body{
     margin: 0 0 20px 0;
   }
   .add__form button{
-    width: 150px !important;
+    width: 150px;
   }
   .contact__item{
     padding: 10px 5px;
