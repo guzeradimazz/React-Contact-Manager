@@ -12,12 +12,21 @@ hr{
     align-items: center;
     font-size: 16px;
 }
+.contact__item p{
+    width: 100px;
+}
 .contact__item__name , .contact__item__phone{
     color: rgb(238, 136, 2);
 }
 .contact__item__delete{
+    background-image: url('../../images/trash-can.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 17px;
+    background-position-x: 8px;
     width: 100px;
     height: 30px;
+    padding-left: 10px;
     cursor: pointer;
     border: none;
     border-radius: 10px;
@@ -26,7 +35,24 @@ hr{
     transition: .3s ease;
     text-transform: uppercase;
 }
-.contact__item__delete:hover{
+.contact__item__rename{
+    background-image: url('../../images/pencil.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 17px;
+    background-position-x: 8px;
+    width: 100px;
+    height: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: rgb(238, 136, 2);
+    transition: .3s ease;
+    text-transform: uppercase;
+}
+button:hover{
     color: rgb(238, 136, 2);
     background-color: #fff;
     transition: .3s ease;

@@ -8,6 +8,8 @@ import AddForm from './components/AddForm/AddForm';
 
 function App() {
 const [contacts, setContacts] = useState([])
+const [name, setName] = useState('')
+const [phone, setPhone] = useState('')
 
 useEffect(() => {
   setContacts([
@@ -50,8 +52,14 @@ useEffect(() => {
       <AddForm
         contacts={contacts}
         setContacts={setContacts}
+        name={name}
+        setName={setName}
+        phone={phone}
+        setPhone={setPhone}
       />
       <ContactList 
+        setName={setName}
+        setPhone={setPhone} 
         contacts={contacts}
         setContacts={setContacts}
       />
