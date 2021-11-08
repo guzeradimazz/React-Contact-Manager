@@ -39,8 +39,5 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin: auto;
-      position: absolute;
-      top: 40%;
-      left: 40%;
+      margin: 50px auto;
   }
