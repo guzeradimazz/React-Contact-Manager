@@ -16,7 +16,7 @@ body{
     flex-wrap: wrap;
   }
   .contact__item p {
-    width: 150px;
+    width: 160px;
     text-align: center;
     }
   .contact__item button{
@@ -25,4 +25,7 @@ body{
     background-position-x: 4mm;
     align-items: center;
   }
+}
+.contact__item p {
+  margin-bottom: 30px;
 }
