@@ -1,6 +1,13 @@
 body{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.add__form input{
+  height: 30px;
+}
+button{
+  font-size: 12px !important;
+  height: 30px !important;
+}
 @media screen and (max-width:414px) {
   .add__form{
     flex-direction: column;
@@ -16,7 +23,7 @@ body{
     flex-wrap: wrap;
   }
   .contact__item p {
-    width: 160px;
+    min-width: 165px;
     text-align: center;
     }
   .contact__item button{
