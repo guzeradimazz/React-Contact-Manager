@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-Contact-Manager/static/css/main.a03f00d7.chunk.css",
+    "main.css": "/React-Contact-Manager/static/css/main.750a906e.chunk.css",
     "main.js": "/React-Contact-Manager/static/js/main.c73a5318.chunk.js",
     "main.js.map": "/React-Contact-Manager/static/js/main.c73a5318.chunk.js.map",
     "runtime-main.js": "/React-Contact-Manager/static/js/runtime-main.ae6a030e.js",
@@ -8,13 +8,13 @@
     "static/js/2.50fde45a.chunk.js": "/React-Contact-Manager/static/js/2.50fde45a.chunk.js",
     "static/js/2.50fde45a.chunk.js.map": "/React-Contact-Manager/static/js/2.50fde45a.chunk.js.map",
     "index.html": "/React-Contact-Manager/index.html",
-    "static/css/main.a03f00d7.chunk.css.map": "/React-Contact-Manager/static/css/main.a03f00d7.chunk.css.map",
+    "static/css/main.750a906e.chunk.css.map": "/React-Contact-Manager/static/css/main.750a906e.chunk.css.map",
     "static/js/2.50fde45a.chunk.js.LICENSE.txt": "/React-Contact-Manager/static/js/2.50fde45a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ae6a030e.js",
     "static/js/2.50fde45a.chunk.js",
-    "static/css/main.a03f00d7.chunk.css",
+    "static/css/main.750a906e.chunk.css",
     "static/js/main.c73a5318.chunk.js"
   ]
 }
