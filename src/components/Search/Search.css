@@ -3,6 +3,7 @@
     flex-direction: row;
     font-size: 16px;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .search__input{
     border: 1px solid #ee8802;
@@ -25,5 +26,5 @@
     border: 1px solid #ee8802;
     background-color: #ee8802;
     width: 100px;
-    height: 34px;
+    height: 30px;
 }

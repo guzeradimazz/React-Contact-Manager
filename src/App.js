@@ -1,3 +1,4 @@
+import './styles/ZeroStyle.css';
 import Header from './components/Header/Header';
 import React,{ useState,useEffect } from 'react';
 import ContactList from './components/ContactList/ContactList';
